@@ -1,0 +1,18 @@
+/*  El . (punto es para hacer referenca a las clases  */
+html{
+    font-size: 62.5%;
+    font-family: "Nunito", sans-serif;
+}
+body{
+    font-size: 16px;
+}
+.title{
+    color: blue;
+    text-align: center;
+}
+.title span{
+    font-family: "Nunito", sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+    
+}
