@@ -1,4 +1,12 @@
 /*  El . (punto es para hacer referenca a las clases  */
+:root{
+    --blanco: #ffffff;
+    --oscuro: 212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+}
+
 html{
     font-size: 62.5%;
     font-family: "Nunito", sans-serif;
@@ -14,5 +22,34 @@ body{
     font-family: "Nunito", sans-serif;
     font-size: 2rem;
     font-style: italic;
-    
+}
+
+.navegador-principal{
+    background-color: var(--secundario);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;/*justify content para Filas*/
+    align-content: space-between; /*align items para columnas*/
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.navegador-principal a{
+    color: var(--blanco);
+    text-decoration: none; /* Quita el subrayado */;
+    padding: 1rem ;
+}
+
+.navegador-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
 }
