@@ -50,7 +50,7 @@ body{
 
 
 .title{
-    color: blue;
+    color: #0B3D06;
     text-align: center;
     font-family: 'nunito', sans-serif;
 }
@@ -130,4 +130,36 @@ body{
     margin: 0;
 }
 
-/*gradiente linear*/
+.servicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+
+@media (mid-width: 768px){
+    .servicios{
+        display: grid;
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* grid-template-columns: 33.3% 33.3% 33.3%; */
+        grid-template-columns: repeat(3, 1fr); /*Esta propiedad define el area de la grilla
+        las columnas y la funcion repeat repite 3 veces 1 fraccion  */
+        column-gap: 1rem;
+    }
+}
+
+p{
+    text-align: center;
+    line-height: 2;
+}
+
+.iconos{
+    width: 15rem;
+    height: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
