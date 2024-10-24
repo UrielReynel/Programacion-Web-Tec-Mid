@@ -112,8 +112,6 @@ body{
     color: white;
 }
 
-
-
 .contenido-hero a{
     color: var(--blanco);
     text-decoration: none;
@@ -162,4 +160,115 @@ p{
     justify-content: space-evenly;
     align-items: center;
 }
+.encabezado_contactos{
+    display: flex;
+    justify-content: center;
+}
 
+.encabezado_contactos h2{
+    margin-right: 10px;
+}
+
+/*Contacto*/
+.formulario{
+    background-color: var(--gris_claro);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.formulario input{
+    justify-content: center;
+    width: 75%;
+}
+
+.formulario legend{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+@media (mid-width: 768px){
+    .formulario{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (mid-width: 480px){
+    .formulario{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+input[type="submit"]{
+    background-color: var(--secundario);
+    border: none;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 1rem;
+    width: 30%;
+}
+
+.campo label{
+    color: var(--oscuro);
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.campo{
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.enviar label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.w-sm-100{
+    width: 100%;
+}
+
+@media (mid-width: 768px){
+    .w-sm-100{
+        width: 100%;
+    }
+}
+
+.flex{
+    display: flex;
+}
+
+.alinear-derecha{
+    justify-content: flex-end;
+}
+
+@media (mid-width: 768px){
+    .campos{
+        display: flex;
+        grid-template-columns: 2, 1fr;
+        grid-template-rows: auto auto 20rem;
+    }
+}
+
+/*El orden seria: Nombre, Email, Télefono, Mensaje
+para modificar correo y mensaje uso nth-child 3 y 4 */
+
+.campo:nth-child(3), .campo:nth-child(4){
+    grid-column: 1 / 3;
+}
