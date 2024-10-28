@@ -1,0 +1,285 @@
+:root{ /*Definimos los colores que usaremos para toda la pagina, en forma de variables*/
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+    --gris_claro: #DFE9F3;
+}
+
+html{
+    font-size: 62.5%;   /*Tamaño de letra*/
+    box-sizing: border-box; /*Hack para el manejo de box model*/
+    background-image: linear-gradient(to top, var(--gris_claro) 0%, var(--blanco) 100%); /*Es el color del fondo de nuestro HTML, en este caso es un gradiente que va de blanco a gris claro*/
+    scroll-snap-type: y mandatory; /*Desplazamiento del contenedor*/
+}
+
+ /*Desplazamiento del contenedor y dividimos las secciones de como queremos que se desplace*/
+.titulo, .servicios-heading, .contacto-heading{
+    scroll-snap-align: start; 
+    scroll-snap-stop: always; 
+}
+
+/*Hack para el manejo de box model*/
+*, *::before,*::after{
+    box-sizing: inherit;
+}
+
+
+body{
+    font-size: 16px; /*TAMAÑO DE LETRA*/
+    font-family: Arial, Helvetica, sans-serif; /*Familia de letra*/
+    font-family: 'Krub', sans-serif;
+}
+
+.sombra{  /*La sombra que se muestra en el apartado de contacto*/
+    /*Fragmento de codigo que sacamos de la pagina*/
+    box-shadow: 0px 0px 5px 0px rgba(112,112,112,0.48);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(112,112,112,0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(112,112,112,0.5);
+    background-color: var(--blanco); 
+    padding: 2rem;
+    border-radius: 1rem; /*Redondeo*/
+}
+
+h1{
+    font-size: 3.8rem; /*Tamaño del titulo h1*/
+}
+
+h2{
+    font-size: 2.8rem; /*Tamaño del titulo h2*/
+}
+
+h3{
+    font-size: 1.8rem; /*Tamaño del titulo h3*/
+}
+
+h1,h2,h3{
+    text-align: center; /*Alineado del titulo h1,h2.h3*/
+}
+
+
+.titulo span{
+    font-size: 2rem;
+}
+
+/*
+.navegacion-principal{
+    background-color: var(--secundario);
+
+}
+*/
+/*Esto es dentro del nav, la clase la llamamos navegacion-principal contenedor*/
+.contenedor{
+    max-width:120rem;
+    margin: 0 auto;
+
+}
+
+.nav-bg{
+    background-color: var(--secundario); /*Color de la barra de navegacion*/
+}
+
+/*Estilos de la barra de navegacion*/
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 2rem;
+   
+}
+
+.navegacion-principal a{
+    padding: 1rem; /*Aqui se coloca el padding para que se refleje con el hover*/
+    /*display: block;  Para poner los elementos uno sobre otro*/
+    color: var(--blanco); /*Color de la letra*/
+    text-decoration: none;
+}
+
+/*Para cuuando pasemos el raton sobre los elementos de la navegacion*/
+.navegacion-principal a:hover{
+    padding: 1rem; /*Aqui se coloca el padding para que se refleje con el hover y sea del mismo tamaño que el contenido de la navegacion principal*/
+    background-color: var(--primario);
+    color: var(--oscuro);
+    
+}
+
+.hero{
+    background-image: url(../img/MicrosoftTeams-image.png); /*../ es para regresar una carpeta afuera y buscar la imagen*/
+    background-repeat: no-repeat; /* Para hacer que la imagen no se repita cuando no coincide con el tamaño del navegador*/
+    background-size: cover; /* Para que la imagen tome el tamaño disponible*/
+    height: 450px;
+    position: relative; /* El padre debe ser relative*/
+    margin-bottom: 2rem;
+}
+
+.contenido-hero{
+    position: absolute; /* El hijo debe ser absolute*/
+    background-color: rgba(0,0,0,.7); /* 70% de transparencia*/
+    width: 100%;
+    height: 100%;
+    /* Para alienar vertical y horizontal*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-hero h2, .contenido-hero p{
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row; /*Para que se acomode como filas cuando se haga mas pequena la pantalla*/
+        
+    }
+ }
+
+ .ubicacion{
+    display: flex;
+    align-items: flex-end;
+ }
+
+ /*Arreglos del boton*/
+ .boton{
+    background-color: var(--secundario);
+    text-decoration: none;
+    padding: 1rem 3rem; /*El 3rem es para las esquinas redondeadas*/
+    border-radius: .5rem;
+    color: var(--blanco);
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-transform: uppercase; /*Transformo las letras en mayusculas*/
+    text-align: center;
+    width: 90%;
+    border: none;
+ }
+
+ .boton:hover{
+    cursor: pointer;
+ }
+
+ 
+
+ .servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+ }
+
+ .servicio h3{ 
+    color: var(--secundario);
+    font-weight: normal;
+ }
+
+ .servicio p{
+    line-height: 2; /*Interlineado*/
+    text-align: center;
+ }
+
+ .servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+
+ .formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+ }
+
+ .formulario fieldset{
+    border: none;
+ }
+
+ .formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--primario);
+ }
+
+
+
+ 
+
+ .campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+ }
+
+ .input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+ }
+
+ .campo textarea{
+    height: 20rem;
+ }
+
+
+ .flex{
+    display:flex;
+   }
+
+.alinear-derecha{
+    justify-content: flex-end;
+   }
+
+.footer{
+    text-align: center;
+}
+.w-sm-100{
+    width: 100%;
+ }
+
+ @media (min-width: 768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+     }
+  }
+
+ @media (min-width: 780px) {
+    .boton{
+        width: auto;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .w-sm-100{
+        width: auto;
+    }
+   }
+
+   @media (min-width: 768px) {
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 1rem;
+        grid-template-rows: auto auto 20rem;
+    }
+    .campo:nth-child(3),
+    .campo:nth-child(4){
+    grid-column: 1/3;
+    }
+    }
+
+   
+

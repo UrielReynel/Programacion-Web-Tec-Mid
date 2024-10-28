@@ -1,0 +1,378 @@
+:root
+{
+    --AzulProfundo: #001F3F;
+    --AzulEspacial: #071E3D;
+    --AzulNocturno: #004080;
+    --AzulNocturno2:#00509E;
+    --AzulNebulosa: #214559;
+    --AzulNebulosa2: #3A536A;
+    --AzulCeleste: #33A1DE;
+    --AzulCeleste2: #5DC8FF;
+    --AzulCeleste3: #0080FF;
+    /*Azules Intensos*/
+    --AzulIntenso1:#0c03fd;
+    --AzulIntenso2:#0902e2;
+    --AzulIntenso3: #0602c6;
+    --AzulIntenso4:#0301ab;
+    --AzulIntenso5:#000090;
+}
+
+html
+{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+    
+}
+
+body
+{
+    background-color: aliceblue;
+    
+}
+
+
+/* ------------------------NAVEGACION PRINCIPAL---------------------*/
+.nav_bg
+{
+    background-color: var(--AzulCeleste3);
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.nav_principal
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.iconos
+{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.redes
+{
+    display: inline-block;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5rem;
+}
+.redes:hover
+{
+    background-color: var(--AzulCeleste2);
+}
+
+
+/* ------------------------BANNER---------------------------*/
+.hero
+{
+    font-family: 'Quicksand', sans-serif;    
+    background-image: url(../img/PaulBanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 45rem;
+    position: relative;
+    margin: 1rem 0;
+    border-radius: 2rem;
+    background-color: var(--AzulIntenso5);
+    padding: 1.5rem;
+    max-width: 150rem;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.container-hero a
+{
+    padding-top: 2rem;
+    color: aliceblue;
+    font-size: 5rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+.container-hero a:hover
+{
+    color: var(--AzulIntenso5);
+    text-decoration: none;
+
+}
+/*----------------QUIENES SOMOS--------------------------*/
+@media (min-width: 768px) 
+{
+    .contenidos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: .5rem;
+        font-family: 'Quicksand', sans-serif;    
+        margin: 1rem 0;
+        border-radius: 2rem;
+        padding: 1.5rem;
+        max-width: 150rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+.sombra{
+    box-shadow: -3px 1px 5px 4px rgba(0,0,0,0.13);
+    -webkit-box-shadow: -3px 1px 5px 4px rgba(0,0,0,0.13);
+    -moz-box-shadow: -3px 1px 5px 4px rgba(0,0,0,0.13);
+
+}
+.contenido{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 0 auto;
+    align-items: center;
+  
+}
+.contenido h3{
+    color: var(--AzulCeleste3);
+    font-weight: normal;
+}
+.contenido p{
+    line-height: 2;
+    text-align: center;
+}
+.contenido .QS{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--AzulCeleste3);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ----------------FECHAS DEL CONCIERTO------------------*/
+.contain-shadow
+{
+    font-family: 'Quicksand', sans-serif;    
+    margin: 1rem 0;
+    border-radius: 2rem;
+    background-color: var(--AzulCeleste3);
+    padding: 1.5rem;
+    max-width: 150rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contain-shadow h3 
+{
+    text-align: center;    
+    font-size: 4rem;
+    color: aliceblue;
+}
+
+.table td
+{
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+.table th
+{
+    font-size: 2rem;
+    color: var(--AzulIntenso4);
+}
+
+.find-tickets 
+{
+    display: inline-block;
+    padding: 1rem 2rem; /* Ajusta el relleno según tus preferencias */
+    text-decoration: none;
+    background-color: var(--AzulNocturno2); /* Cambia el color de fondo según tus preferencias */
+    color:aliceblue; /* Cambia el color del texto según tus preferencias */
+    border: .3rem solid var(--AzulCeleste2); /* Puedes cambiar el color y el grosor según tus preferencias */
+    border-radius: 3rem; /* Ajusta el radio de la esquina para lograr la forma redondeada */
+}
+
+.find-tickets:hover 
+{
+    text-decoration: none;
+    color:aliceblue; /* Cambia el color del texto según tus preferencias */
+    background-color: var(--AzulNocturno); /* Cambia el color de fondo al pasar el mouse */
+    border: .3rem solid var(--AzulProfundo); /* Puedes cambiar el color y el grosor según tus preferencias */
+}
+
+
+
+/* -------------------CARRUSEL DE FOTOS-------------------------- */
+.carousel-inner
+{
+    text-align: center;
+}
+
+.carousel-inner .item 
+{
+    display: inline-block;
+    text-align: left;
+    
+}
+
+.carousel-inner img 
+{
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al 100% del contenedor */
+    height: auto; /* Hace que la altura se ajuste automáticamente para mantener la proporción */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+#myCarousel 
+{
+    background-color: var(--AzulCeleste3);
+    padding: 1.5rem;
+    max-width: 150rem;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 2rem;
+}
+
+
+/* -------------------SUSCRIPCIÓN---------------------*/
+.information
+{
+    font-family: 'Quicksand', sans-serif;    
+    margin: 1rem 0;
+    border-radius: 2rem;
+    background-color: var(--AzulCeleste3);
+    padding: 1.5rem;
+    max-width: 150rem;
+    margin-right: auto;
+    margin-left: auto;;
+
+}
+.form-subscribe
+{
+    text-align: center;
+    width: min(50rem, 100%);
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 5rem;
+    
+}
+
+.form-subscribe fieldset 
+{
+    border: none;
+    font-size: 2rem;
+}
+  
+.form-subscribe legend 
+{
+    font-size: 3rem;
+    color: aliceblue; /*Color solo puesto para ver cambios*/
+}
+
+.entrada label 
+{
+    display: block;
+    color: aliceblue;
+}
+
+.entrada input
+{
+    background-color: var(--AzulNocturno);
+    color: aliceblue;
+    border-radius: 1rem;
+}
+
+::placeholder
+{
+    color: aliceblue;
+    font-style: italic;
+}
+
+.boton_enviar
+{
+    margin: 2rem;
+    display: inline-block;
+    padding: .1rem 3rem; 
+    text-decoration: none;
+    background-color: var(--AzulNocturno2); 
+    color:aliceblue; 
+    border: .3rem solid var(--AzulCeleste2); 
+    border-radius: 3rem; 
+}
+
+.boton_enviar:hover
+{
+    text-decoration: none;
+    color:aliceblue; /* Cambia el color del texto según tus preferencias */
+    background-color: var(--AzulNocturno); /* Cambia el color de fondo al pasar el mouse */
+    border: .3rem solid var(--AzulProfundo); /* Puedes cambiar el color y el grosor según tus preferencias */
+
+}
+
+/* ------------------------------PIE DE PÁGINA-----------------------------*/
+.footer
+{
+    
+    color: aliceblue;
+    font-family: 'Quicksand', sans-serif;    
+    background-color: var(--AzulCeleste3);
+}
+
+/* ---------------CONTACTO-----------------*/
+.contact
+{   
+    padding: 2rem;
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    background-color: var(--AzulCeleste3);
+}
+
+.contact h2
+{
+    padding: 2rem;
+    font-size: 3rem; /* Tamaño de la fuente */
+    text-align: center;
+}
+
+
+/* ---------------COPYRIGHT-----------------*/
+
+.copyright
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+    color: aliceblue;
+}
+
+.copyright p
+{
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) 
+{
+
+    .contact p
+    {
+        text-align: center;
+    }
+
+    .hero
+    {
+        background-image: url(../img/hero.jpg);
+    }   
+
+    .nav_principal
+    {
+        justify-content: space-around;
+    }
+
+
+}
+
